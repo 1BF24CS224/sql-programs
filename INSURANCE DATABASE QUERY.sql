@@ -42,6 +42,10 @@ select accident_date, location
 from accident;
 select driver_id
 from participated where damage_amount >=25000;
+select * from participated order by damage_amount DESC;
+select AVG(damage_amount) from participated;
+select MAX(damage_amount) from particpated;
+select name from personA,particpated B WHERE A.driver_id=B.driver_id AND damage_amount>(select AVG(damage_amount) from participated);
 
 
 
